@@ -13,8 +13,7 @@ api_key = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 # Fixed the 'NotFound' error by using the full model path string
-model = genai.GenerativeModel('models/gemini-1.5-flash-001')
-
+model = genai.GenerativeModel('models/gemini-1.5-flash')
 # Database Credentials
 URI = st.secrets.get("NEO4J_URI") or os.getenv("NEO4J_URI")
 USER = st.secrets.get("NEO4J_USERNAME") or os.getenv("NEO4J_USERNAME", "neo4j")
